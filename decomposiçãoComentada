@@ -1,0 +1,11 @@
+n = int(input("Digite um número que deseja saber a decomposição: ")) #ex: n = 10
+fator = 2
+deco = 0
+while n > 1:
+    while  n % fator == 0: #o resto da divisão do fator for zero
+        deco = deco + 1 #a decomposição recebe 1 número
+        n = n / fator #o número sofre a divisão. Ex: 10 /2 = 5
+    if deco > 0: #se o fator fizer a decomposição será mencionado, caso contrario não será informado
+        print("fator", fator, "decompõe", deco, "X") #ex: fator 2 decompõe 1 X o número 10(fator)
+    fator = fator+1 # caso o resto da div não for zero, o npúmero será div pelo próximo número. Ex: 2 (fator) +1 = fator passa a ser 3
+    deco = 0   #zeramos a decomposição pelo fator (2)
